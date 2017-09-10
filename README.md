@@ -2,7 +2,8 @@
 Projeto para encurar Url em ruby on rails.
 Arquitetura:
 
- -> I18N -  internationalization
+ *  I18N -  internationalization
+
  -> Bootstrap
  -> rails-assets
  -> notify.js
