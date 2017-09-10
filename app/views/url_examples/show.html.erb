@@ -1,0 +1,31 @@
+<br>
+<div class = "basic-grey">
+  <script>
+      $.notify("<%=  notice %>","info");
+  </script>
+  
+  <h1>Detalhe Url</h1>
+  
+  <p>
+    <strong><%= UrlExample.human_attribute_name("longUrl")%></strong>
+    <%= @url_example.longUrl %>
+  </p>
+  
+  <p>
+    <strong><%= UrlExample.human_attribute_name("shortUrl")%></strong>
+    <%= @url_example.shortUrl %>
+  </p>
+  
+  <p>
+    <strong><%= UrlExample.human_attribute_name("customAlias")%></strong>
+    <%= @url_example.customAlias %>
+  </p>
+  
+  <p>
+    <strong><%= UrlExample.human_attribute_name("qtdAcesso")%></strong>
+    <%= @url_example.qtdAcesso %>
+  </p>
+  
+  <%= link_to t('buttons.back'), url_examples_path, class: "btn btn-default" %>
+  <%= link_to t('buttons.go'), @url_example.longUrl, class: "btn btn-success" %>
+</div>

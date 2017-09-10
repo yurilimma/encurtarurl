@@ -1,0 +1,34 @@
+<br>
+<div class = "basic-grey">  
+   <script>
+      $.notify("<%=  notice %>","info");
+   </script>
+  
+  <h1>Listando Urls</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th><%= @url_examples.human_attribute_name("shortUrl")%></th>
+        <th><%= @url_examples.human_attribute_name("customAlias")%></th>
+        <th colspan="4"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @url_examples.each do |url_example| %>
+        <tr style="background: <%= cycle('white', '#f0f0f5')%>">
+          <td><%= url_example.shortUrl %></td>
+          <td><%= url_example.customAlias %></td>
+          <td><%= link_to t('buttons.show'), url_example %></td>
+          <td><%= link_to t('buttons.destroy'), url_example, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @url_examples %>
+  <br>
+  <%= link_to t('buttons.back'), root_path, class:"btn btn-default" %>
+  <%= link_to t('buttons.new'), new_url_example_path, class:"btn btn-primary" %>
+  
+</div>

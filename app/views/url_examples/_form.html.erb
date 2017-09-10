@@ -1,0 +1,30 @@
+<%= form_for(@url_example, html: {class: "basic-grey"}) do |f| %>
+  <% if @url_example.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@url_example.errors.count, "error") %> prohibited this url_example from being saved:</h2>
+
+      <ul>
+      <% @url_example.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h1>Gerar Short Url</h1>
+  
+  <div class="field">
+    <%= f.label :longUrl %>
+    <%= f.text_field :longUrl %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :customAlias %>
+    <%= f.text_field :customAlias %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= link_to 'Voltar', url_examples_path, class:"btn btn-default" %>
+    <%= f.submit "Converter", class:"btn btn-primary"%>
+    
+  </div>
+<% end %>

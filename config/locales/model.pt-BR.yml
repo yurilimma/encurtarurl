@@ -1,0 +1,14 @@
+"pt-BR":
+    activerecord: 
+      models:
+        url_example: 
+          one: Url
+          other: Urls
+       
+      attributes:
+        url_example:
+            longUrl: Url Inteira
+            shortUrl: Url Short
+            customAlias: Alias
+            qtdAcesso: Quantidade Clicks
+             

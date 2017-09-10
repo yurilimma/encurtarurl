@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  longUrl: MyString
+  shortUrl: MyString
+  customAlias: MyString
+  qtdAcesso: MyString
+
+two:
+  longUrl: MyString
+  shortUrl: MyString
+  customAlias: MyString
+  qtdAcesso: MyString
